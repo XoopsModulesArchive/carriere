@@ -1,0 +1,24 @@
+<h4 style="text-align:left;"><{$lang_JOBTITLE}></h4>
+
+<table width="100%" align="center" border="1" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="2">
+
+    <tr>
+        <td width="20" bgcolor="#2F5376" id="joblistheader"><b><a href="emplois.php?op=EVAdmin&ordre=id_job&ordtype=<{$ordtype}>"><{$lang_VIEWID}></a></b></td>
+        <td bgcolor="#2F5376" id="joblistheader"><b><a href="emplois.php?op=EVAdmin&ordre=id_titre&ordtype=<{$ordtype}>"><{$lang_VIEWTITRE}></a></b></td>
+        <td width="85" bgcolor="#2F5376" id="joblistheader"><b><a href="emplois.php?op=EVAdmin&ordre=id_typeposte&ordtype=<{$ordtype}>"><{$lang_VIEWTYPEPOSTE}></a></b></td>
+        <td width="75" bgcolor="#2F5376" id="joblistheader"><b><a href="emplois.php?op=EVAdmin&ordre=id_locations&ordtype=<{$ordtype}>"><{$lang_VIEWLOCATION}></a></b></td>
+        <td width="75" bgcolor="#2F5376" id="joblistheader"><b><a href="emplois.php?op=EVAdmin&ordre=posted_date&ordtype=<{$ordtype}>" ><{$lang_VIEWPOSTEDDATE}></a></b></td>
+    </tr>
+
+
+    <{foreach item=emplois from=$emploisliste}>
+    <tr>
+        <td align="left" id="joblist"><{$emplois.id}></td>
+        <td id="joblist"><a href="viewjob.php?op=EVFullview&row_pos=<{$emplois.count}>&ordre=<{$ordre}>&ordtype=<{$ordtypelink}>"><{$emplois.viewtitre}></a></td>
+        <td id="joblist"><{$emplois.typeposte}></td>
+        <td id="joblist"><{$emplois.locations}></td>
+        <td id="joblist"><{$emplois.jobposteddate}></td>
+    </tr>
+    <{/foreach}>
+
+</table>

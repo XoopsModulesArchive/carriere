@@ -1,0 +1,15 @@
+<table cellspacing="0">
+  <tr>
+    <td id="mainmenu">
+      <!-- start module menu loop -->
+      <{foreach item=imenu from=$block.contents}>
+        <{if $imenu.link != ""}>
+          <a class="menuMain" href="<{$imenu.link}>" target="<{$imenu.target}>"><{$imenu.title}></a>
+        <{else}>
+          <{$imenu.title}>
+        <{/if}>
+      <{/foreach}>
+      <!-- end module menu loop -->
+    </td>
+  </tr>
+</table>

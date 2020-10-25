@@ -1,0 +1,20 @@
+<table border="0" summary="">
+	<tr></tr>
+    <tr>
+        <td>
+        	<div><b><u><{$titres}></u></b></div><br>
+        	<div><{$description}></div>
+
+		<br>
+         <form name="<{$form_select.name}>" action="<{$form_select.action}>" method="<{$form_select.method}>">
+             	<{foreach item=element from=$form_select.elements}>
+
+                	<{$element.caption}>
+                	<{$element.body}>
+                <{/foreach}>
+             </form>
+		</td>
+
+    </tr>
+
+</table>

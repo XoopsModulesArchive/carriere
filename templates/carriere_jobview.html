@@ -1,0 +1,90 @@
+<table border="0" width="100%">
+    <tr>
+        <td>&nbsp;</td>
+        <td width="600">
+                        <table border="0" width="100%">
+                <tr>
+                    <td width="100%" align="center"><b><{$lang_VIEWID}> <{$ev_job_id}></b> (<{$ev_jobposteddate}>)</td>
+                </tr>
+            </table><br>
+			<table border="0" width="100%">
+                <tr>
+                    <td align="right" ><{$postuler.javascript}>
+
+                        <form name="<{$postuler.name}>" action="<{$postuler.action}>" method="<{$postuler.method}>">
+                            <{foreach item=element from=$postuler.elements}>
+                            <{$element.caption}>
+                            <{$element.body}>
+                            <{/foreach}>
+                        </form><!-- <font size="4"><{$lang_JOBTITRE}></font> --></td>
+                    <td align="left">
+                        <{$sendtofriend.javascript}>
+
+                        <form name="<{$sendtofriend.name}>" action="<{$sendtofriend.action}>" method="<{$sendtofriend.method}>">
+                            <{foreach item=element from=$sendtofriend.elements}>
+                            <{$element.caption}>
+                            <{$element.body}>
+                            <{/foreach}>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+
+            <!--<table border="0" width="100%">
+                <tr>
+                    <td width="50%"><b><{$lang_VIEWTITRE}></b>: <a href="desctitre.php?op=EVDescTitre&id=<{$titreposte_id}>"><{$ev_titres}></a></td>
+                    <td width="50%"><b><{$lang_VIEWTYPEPOSTE}></b>: <{$ev_typeposte}></td>
+                </tr>
+            </table><br>
+            <table border="0" width="100%">
+                <tr>
+                    <td width="50%"><b><{$lang_VIEWLOCATION}></b>: <{$ev_locations}></td>
+                    <td width="50%"><b><{$lang_VIEWSTARTDDATE}></b>: <{$ev_jobstartdate}></td>
+                </tr>
+            </table><br>
+            <table border="0" width="100%">
+                <tr>
+                    <td width="50%">
+
+<!-- <b><{$lang_VIEWSTATUS}></b>: <{$ev_status}> -->
+
+                    <!--</td>
+                    <td width="50%"><b><{$lang_VIEWENDDATE}></b>: <{$ev_jobenddate}></td>
+                </tr>
+            </table>-->
+
+            <table width="100%" align="center" border="1" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="2">
+            	<tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWTITRE}></b></td>
+                    <td align="left" id="joblist"><{$emplois.id}><a href="desctitre.php?op=EVDescTitre&id=<{$titreposte_id}>"><{$ev_titres}></a></td>
+                </tr>
+                <tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWTYPEPOSTE}></b></td>
+                    <td align="left" id="joblist"><{$emplois.id}><{$ev_typeposte}></td>
+                </tr>
+                <tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWLOCATION}></b></td>
+                    <td align="left" id="joblist"><{$emplois.id}><{$ev_locations}></td>
+                </tr>
+                <tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWSTARTDDATE}></b></td>
+                    <td align="left" id="joblist"><{$emplois.id}><{$ev_jobstartdate}></td>
+                </tr>
+                <tr>
+                	<td width="30%" bgcolor="#2F5376" id="joblistheader"><b><{$lang_VIEWENDDATE}></b></td>
+                    <td align="left" id="joblist"><{$emplois.id}><{$ev_jobenddate}></td>
+                </tr>
+            </table>
+
+
+            <br>
+            <table border="0"width="100%"
+                <tr>
+                    <td width="50%"><b><{$lang_JOBDESC}></b>:<p><{$ev_description}></p></td>
+                </tr>
+            </table><br>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>

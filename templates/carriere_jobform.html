@@ -1,0 +1,58 @@
+<table border="0" width="100%">
+    <tr>
+        <td>&nbsp;</td>
+        <td width="600">
+                        <table border="0" width="100%">
+                <tr>
+                    <td width="100%" align="center"><b><{$lang_VIEWID}> <{$ev_job_id}></b> (<{$ev_jobposteddate}>)</td>
+                </tr>
+            </table><br>
+            <table border="0" width="100%">
+                <tr>
+                    <td width="50%"><b><{$lang_VIEWTITRE}></b>: <{$ev_titres}></td>
+                    <td width="50%"><b><{$lang_VIEWTYPEPOSTE}></b>: <{$ev_typeposte}></td>
+                </tr>
+            </table><br>
+            <table border="0" width="100%">
+                <tr>
+                    <td width="50%"><b><{$lang_VIEWLOCATION}></b>: <{$ev_locations}></td>
+                    <td width="50%"><b><{$lang_VIEWSTARTDDATE}></b>: <{$ev_jobstartdate}></td>
+                </tr>
+            </table><br>
+            <table border="0" width="100%">
+                <tr>
+                    <td width="50%">
+
+<!-- <b><{$lang_VIEWSTATUS}></b>: <{$ev_status}> -->
+
+                    </td>
+                    <td width="50%"><b><{$lang_VIEWENDDATE}></b>: <{$ev_jobenddate}></td>
+                </tr>
+            </table><br>
+			<table border="0" width="100%">
+                <tr>
+                    <td width="100%">
+
+						<{$postuler.javascript}>
+						<font size="4"><u><{$postuler.title}></u></font>
+                        <form name="<{$postuler.name}>" action="<{$postuler.action}>" method="<{$postuler.method}>"<{$postuler.extra}>>
+                            <table border="0" summary="">
+
+							<{foreach item=element from=$postuler.elements}>
+                            <tr>
+							<td><{$element.caption}></td>
+							<td><{$element.body}></td>
+							</tr>
+
+
+                            <{/foreach}>
+
+							</table>
+                    </td>
+
+                </tr>
+            </table><br>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>

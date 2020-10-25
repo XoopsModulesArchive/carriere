@@ -1,0 +1,14 @@
+
+<table><tr><td id="joblistbody"><center><br><font size="2"><u><a href="<{$xoops_url}>/modules/carriere/index.php"><{$block.bindex}></u></font></center></a>
+<br>
+<table><tr><td id="joblist"><{$block.blockdescription}></td></tr></table>
+<ul>
+<{foreach item=message from=$block.carriere}>
+<li>
+
+<a href ="<{$xoops_url}>/modules/carriere/viewjob.php?op=EVFullview&row_pos=<{$message.id_job}>&ordre=start_date&ordtype=0"><{$message.title}></a>
+</li>
+<{/foreach}>
+</ul>
+
+<br><center><a href ="<{$xoops_url}>/modules/carriere/emplois.php"><{$block.viewall}></a></center></td></tr></table>

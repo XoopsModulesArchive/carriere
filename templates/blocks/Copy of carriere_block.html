@@ -1,0 +1,8 @@
+<ul>
+<{foreach item=message from=$block.carriere}>
+<li>
+<{$message.date}><br>
+<a href ="<{$xoops_url}>/modules/carriere/index.php?id=<{$message.id}>"><{$message.title}></a>
+</li>
+<{/foreach}>
+</ul>
